@@ -1,49 +1,48 @@
 <template>
-
-  <el-row class="ht-100 wt-100">
-    <el-col :span="24" class="ht-100">
-<el-container style="height: 500px; border: 1px solid #eee">
-    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        aside section
-    </el-aside>
-    
-    <el-container>
-      <el-header style="text-align: right; font-size: 12px">
-            header section
-      </el-header>
-      
-      <el-main>
-            main section
-      </el-main>
-    </el-container>
-  </el-container>
-</el-col>
-</el-row>
+  <el-row  class="hello ht-100 wt-100">
+      <el-col :span="24" class="ht-100">
+          <el-container class="ht-100 wt-100">
+              <el-header >
+                      header section
+                      <HeaderSectionVue></HeaderSectionVue>
+              </el-header>
+             <el-container>
+                  <el-aside width="200px">Aside</el-aside>
+                  <el-main>Main</el-main>
+              </el-container>
+          </el-container>
+      </el-col>
+  </el-row>
 </template>
-
 <script>
+import HeaderSectionVue from './HeaderSection.vue'
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+name: 'HomeSection',
+components:{
+  HeaderSectionVue
+}
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
+.ht-100{
+  height: 100%;
+}
+.wt-100{
+  width: 100%;
+}
 h3 {
-  margin: 40px 0 0;
+margin: 40px 0 0;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
+list-style-type: none;
+padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+display: inline-block;
+margin: 0 10px;
 }
 a {
-  color: #42b983;
+color: #42B983;
 }
 </style>
